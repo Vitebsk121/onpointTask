@@ -1,11 +1,11 @@
-import "./App.scss";
+import './App.scss';
 
-import React from "react";
+import React from 'react';
 
 const App = () => {
   return (
-    <div className='App'>
-      <h1>Hello Onpoint!!!</h1>
+    <div className="app">
+      <h1>Hello Onepoint!!!</h1>
     </div>
   );
 };
