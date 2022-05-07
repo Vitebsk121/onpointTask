@@ -1,0 +1,16 @@
+@import "global";
+
+.app {
+  margin: 0 auto;
+  width: 1024px;
+  height: 768px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo {
+  position: absolute;
+  bottom: 15px;
+  left: 70px;
+  z-index: 1000;
+}
