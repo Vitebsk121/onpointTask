@@ -47,6 +47,15 @@ const babelOptions = (preset) => {
   return options;
 }
 
+const CSSModuleLoader = {
+  loader: 'css-loader',
+  options: {
+    modules: {
+      localIdentName: "[local]_[hash:base64:5]",
+    },
+  }
+}
+
 module.exports = {
   mode: 'development',
   entry: {
@@ -99,8 +108,8 @@ module.exports = {
         type: 'asset/resource'
       },
       {
-        test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        test: /\.module\.s[ac]ss$/i,
+        use: [MiniCssExtractPlugin.loader, CSSModuleLoader, "sass-loader",],
       },
       {
         test: /\.js$/,
