@@ -14,13 +14,6 @@ const Slider: React.FC<SliderProps> = ({ children }: SliderProps) => {
   const [touchEnd, setTouchEnd] = useState(0);
   const slidesCount = React.Children.count(children);
 
-  const childrenWithProps = React.Children.map(children, (child) => {
-    if (React.isValidElement(child)) {
-      return React.cloneElement(child, { slidesTranslateX });
-    }
-    return child;
-  });
-
   const swipeToLeft = () => {
     const maxTranslateX = (slidesCount - 1) * slideWidth;
     if (setSlidesTranslateX) {
@@ -62,7 +55,7 @@ const Slider: React.FC<SliderProps> = ({ children }: SliderProps) => {
     >
       <div className={styles.slides_viewport}>
         <div className={styles.slides} style={{ transform: `translateX(${slidesTranslateX}px)` }}>
-          {childrenWithProps}
+          {children}
         </div>
       </div>
     </div>
