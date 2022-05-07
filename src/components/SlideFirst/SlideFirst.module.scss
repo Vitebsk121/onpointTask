@@ -1,0 +1,222 @@
+.slide {
+  width: 1024px;
+  height: 768px;
+  padding: 168px 0 0 70px;
+  position: relative;
+
+  & > p {
+    margin-bottom: 20px;
+    font-size: 27px;
+    font-family: "DinPro regular", sans-serif;
+    color: rgb(36, 36, 36);
+    text-transform: uppercase;
+  }
+
+  & > h2 {
+    font-size: 109px;
+    font-family: "Gilroy ultralight", sans-serif;
+    color: rgb(23, 23, 23);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 20;
+
+    & > .slide_btn {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 45px;
+      padding: 12px 35px 12px 15px;
+      font-size: 27px;
+      font-family: "DinPro regular", sans-serif;
+      color: rgb(23, 23, 23);
+      background-color: rgb(255, 106, 159);
+      border-radius: 50px;
+      position: relative;
+      bottom: 10px;
+
+      & > .btn_arrow {
+        margin-right: 15px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-image: url("../../assets/images/btnArrow.png"), url("../../assets/images/btnCircle.png");
+        background-position: center, center;
+        background-repeat: no-repeat, no-repeat;
+      }
+
+    }
+
+    & > span {
+      font-family: "Gilroy extrabold", sans-serif;
+      letter-spacing: normal;
+    }
+  }
+}
+
+.pic {
+  position: absolute;
+
+  &.molecule {
+    top: 200px;
+    right: 50px;
+    animation: floating 15s infinite linear ;
+    z-index: 50;
+  }
+
+  &.bacteria {
+    top: 75px;
+    left: 0;
+  }
+
+  &.bacteria1 {
+    top: 35px;
+    right: 40px;
+  }
+
+  &.bacteria2 {
+    position: absolute;
+    bottom: 70px;
+    left: 360px;
+  }
+
+  &.bacteria3 {
+    top: 60px;
+    right: 215px;
+    animation: floating2 15s infinite linear ;
+    z-index: 40;
+  }
+
+  &.bacteria4 {
+    position: absolute;
+    left: 25px;
+    bottom: 195px;
+    animation: floating3 15s infinite linear ;
+    z-index: 10;
+  }
+
+  &.bacteria5 {
+    top: 640px;
+    left: 540px;
+    animation: floating4 15s infinite linear ;
+    z-index: 10;
+  }
+
+  &.sperm {
+    position: absolute;
+    top: 600px;
+    left: 0;
+  }
+
+  &.sperm1 {
+    top: 165px;
+    left: 415px;
+    z-index: 30;
+  }
+}
+
+
+//keyframes for pic
+
+@keyframes floating {
+  from {
+    top: 200px;
+    right: 50px;
+    transform: rotate(0);
+  }
+  10% {
+    top: 170px;
+    right: 70px;
+  }
+  20% {
+    top: 150px;
+    right: 90px;
+  }
+  30% {
+    top: 130px;
+    right: 110px;
+  }
+  40% {
+    top: 100px;
+    right: 90px;
+  }
+  50% {
+    top: 130px;
+    right: 70px;
+  }
+  60% {
+    top: 160px;
+    right: 50px;
+  }
+  70% {
+    top: 170px;
+    right: 40px;
+  }
+  80% {
+    top: 180px;
+    right: 30px;
+  }
+  90% {
+    top: 190px;
+    right: 40px;
+  }
+  to {
+    top: 200px;
+    right: 50px;
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes floating2 {
+  from {
+    top: 60px;
+    right: 215px;
+  }
+  25% {
+    right: 150px;
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  75% {
+    right: 180px;
+    transform: scale(1.2);
+  }
+  to {
+    top: 60px;
+    right: 215px;
+  }
+}
+
+@keyframes floating3 {
+  from {
+    left: 25px;
+    bottom: 195px;
+  }
+  50% {
+    left: 5px;
+    bottom: 235px;
+  }
+  to {
+    left: 25px;
+    bottom: 195px;
+  }
+}
+
+@keyframes floating4 {
+  from {
+    top: 640px;
+    left: 540px;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(1);
+    top: 600px;
+    left: 500px;
+  }
+  to {
+    top: 640px;
+    left: 540px;
+  }
+}
