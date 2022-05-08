@@ -7,9 +7,10 @@ import SlideFirst from '../components/SlideFirst/SlideFirst';
 import SlideSecond from '../components/SlideSecond/SlideSecond';
 import Slider from '../components/Slider/Slider';
 import { Context } from '../context/context';
+import SlideThird from "../components/SlideThird/SlideThird";
 
 const App = () => {
-  const [slidesTranslateX, setSlidesTranslateX] = useState(0);
+  const [slidesTranslateX, setSlidesTranslateX] = useState(-2048);
   return (
     <Context.Provider
       value={{
@@ -22,7 +23,7 @@ const App = () => {
         <Slider>
           <SlideFirst />
           <SlideSecond />
-          <SlideSecond />
+          <SlideThird />
         </Slider>
         <a href="https://onpoint.ru/" target="_blank" className={styles.logo}>
           <Logo />

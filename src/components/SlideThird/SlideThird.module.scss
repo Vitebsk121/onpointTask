@@ -1,0 +1,71 @@
+.slide {
+  width: 1024px;
+  height: 768px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide_info {
+  padding: 170px 79px 0 353px;
+
+  & > p {
+    margin-bottom: 10px;
+    font-size: 27px;
+    font-family: "DinPro regular", sans-serif;
+    color: rgb(36, 36, 36);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left;
+    z-index: 57;
+  }
+
+  & > h1 {
+    font-size: 95px;
+    font-family: "Gilroy regular", sans-serif;
+    color: rgb(36, 36, 36);
+    text-transform: uppercase;
+    letter-spacing: 9px;
+    line-height: 1.2;
+    text-align: left;
+    z-index: 58;
+
+    & > span {
+      font-family: "Gilroy extrabold", sans-serif;
+    }
+  }
+}
+
+.slide_content_wrapper {
+  display: flex;
+  padding-left: 230px;
+}
+
+.slide_textBox1 {
+  margin-right: 40px;
+  padding: 60px 70px 75px 125px;
+  border-radius: 40px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2.723px 4.193px 116.25px 8.75px rgba(157, 185, 198, 0.39);
+  width: 414px;
+  height: 265px;
+  z-index: 40;
+}
+
+.slide_textBox2 {
+    margin-bottom: 35px;
+    padding: 60px 85px 50px 42px;
+    border-radius: 40px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2.723px 4.193px 116.25px 8.75px rgba(157, 185, 198, 0.39);
+    width: 263px;
+    height: 150px;
+    z-index: 61;
+}
+
+.textBox_title {
+  font-family: "DinPro regular", sans-serif;
+  font-size: 25px;
+  color: rgb(46, 46, 46);
+  line-height: 1.2;
+}
+
