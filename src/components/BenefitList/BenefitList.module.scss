@@ -1,0 +1,56 @@
+.benefitItem {
+  margin-bottom: 20px;
+}
+
+.benefitItem_id {
+  margin-bottom: 10px;
+  font-family: "Gilroy extrabold", sans-serif;
+  font-size: 25px;
+  color: rgb(140, 201, 232);
+  line-height: 1.2;
+}
+
+.benefitItem_title {
+  font-size: 25px;
+  font-family: "DinPro regular", sans-serif;
+  color: rgb(46, 46, 46);
+  line-height: 1.2;
+}
+
+.listPagination {
+  display: flex;
+  align-items: center;
+}
+
+.listPagination_btn {
+  width: 10px;
+  height: 15px;
+  background-image: url("../../assets/images/paginationArrow.png");
+  background-size: cover;
+  background-color: transparent;
+
+  &.right {
+    transform: rotate(180deg);
+  }
+}
+
+.listPagination_markers {
+  display: flex;
+  margin: 0 10px;
+}
+
+.markers_dot {
+  margin-right: 10px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1px solid rgb(252,109,169);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.active {
+    background-color: rgb(252,109,169);
+  }
+}
