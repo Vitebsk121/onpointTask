@@ -9,7 +9,7 @@ import benefits from '../../../Data/benefits';
 type SlideThirdProps = {};
 
 const SlideThird: React.FC<SlideThirdProps> = () => {
-  const [backDropIsOpen, setBackDropIsOpen] = useState(true);
+  const [backDropIsOpen, setBackDropIsOpen] = useState(false);
   const imagesData: IimagesData[] = [
     {
       url: '../../assets/images/slide3/bottle.png',

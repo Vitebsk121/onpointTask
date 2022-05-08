@@ -10,7 +10,7 @@ import { Context } from '../context/context';
 import SlideThird from '../components/SlideThird/SlideThird';
 
 const App = () => {
-  const [slidesTranslateX, setSlidesTranslateX] = useState(-2048);
+  const [slidesTranslateX, setSlidesTranslateX] = useState(0);
   return (
     <Context.Provider
       value={{
