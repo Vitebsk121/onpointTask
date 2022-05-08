@@ -2,6 +2,7 @@ import styles from './SlideFirst.module.scss';
 
 import React, { useContext } from 'react';
 import { Context } from '../../context/context';
+import MyButton from "../UI/MyButton/MyButton";
 
 const SlideFirst = () => {
   const { setSlidesTranslateX } = useContext(Context);
@@ -59,18 +60,18 @@ const SlideFirst = () => {
     },
   ];
 
+  const moveToNextSlide = () => {
+    if (setSlidesTranslateX) {
+      setSlidesTranslateX(-1024);
+    }
+  }
+
   return (
     <div className={styles.slide}>
       <p>Привет,</p>
       <h2>
         Это<span> не</span> коммерческое задание
-        <button
-          className={styles.slide_btn}
-          onClick={() => (setSlidesTranslateX ? setSlidesTranslateX(-1024) : null)}
-        >
-          <div className={styles.btn_arrow} />
-          Что дальше?
-        </button>
+        <MyButton btnIconUrl={'../../../assets/images/btnArrow.png'} text={'Что дальше?'} onClickFunc={moveToNextSlide} cls={styles.nextBtn} />
       </h2>
       {imagesData.map(({ url, alt, cls }) => (
         <img key={url} src={url} alt={alt} className={cls.join(' ')} />

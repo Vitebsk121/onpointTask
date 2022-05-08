@@ -21,36 +21,15 @@
     position: relative;
     z-index: 20;
 
-    & > .slide_btn {
-      display: inline-flex;
-      align-items: center;
-      margin-left: 45px;
-      padding: 12px 35px 12px 15px;
-      font-size: 27px;
-      font-family: "DinPro regular", sans-serif;
-      color: rgb(23, 23, 23);
-      background-color: rgb(255, 106, 159);
-      border-radius: 50px;
-      position: relative;
-      bottom: 10px;
-
-      & > .btn_arrow {
-        margin-right: 15px;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-image: url("../../assets/images/btnArrow.png"), url("../../assets/images/btnCircle.png");
-        background-position: center, center;
-        background-repeat: no-repeat, no-repeat;
-      }
-
-    }
-
     & > span {
       font-family: "Gilroy extrabold", sans-serif;
       letter-spacing: normal;
     }
   }
+}
+
+.nextBtn {
+  margin-left: 45px;
 }
 
 .pic {
