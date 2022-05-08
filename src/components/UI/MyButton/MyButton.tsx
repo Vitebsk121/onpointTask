@@ -1,5 +1,6 @@
 import styles from './MyButton.module.scss';
 import React from 'react';
+import BtnCirclePic from '../../../assets/images/btnCircle.png';
 
 type MyButtonProps = {
   btnIconUrl: string;
@@ -14,11 +15,12 @@ const MyButton: React.FC<MyButtonProps> = ({
   onClickFunc,
   cls = '',
 }: MyButtonProps) => {
-  const backgroundImages = [`url("../../../assets/images/btnCircle.png")`];
-  backgroundImages.unshift(`url(${btnIconUrl})`);
   return (
     <button className={styles.slide_btn + ' ' + cls} onClick={onClickFunc}>
-      <div className={styles.btn_arrow} style={{ backgroundImage: backgroundImages.join(',') }} />
+      <div
+        className={styles.btn_arrow}
+        style={{ backgroundImage: `url(${btnIconUrl}), url(${BtnCirclePic})` }}
+      />
       {text}
     </button>
   );
