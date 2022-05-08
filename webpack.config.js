@@ -75,7 +75,7 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      title: 'V8-crm',
+      title: 'Onpoint',
       template: './src/index.html',
       minify: {
         collapseWhitespace: isProd
@@ -101,7 +101,7 @@ module.exports = {
     rules: [
       {
         test: /\.(?:ico|gif|png|jpg|jpeg|svg|mp4)$/i,
-        type: 'asset/resource'
+        type: 'asset/resource',
       },
       {
         test: /\.(ttf|otf)$/i,

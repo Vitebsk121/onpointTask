@@ -5,6 +5,7 @@ import MyButton from '../UI/MyButton/MyButton';
 import BenefitList from '../BenefitList/BenefitList';
 import benefits from '../../data/benefits';
 import { imagesData } from '../../data/imagesThirdSlide';
+import BtnPlusPic from '../../assets/images/btnPlus.png';
 
 type SlideThirdProps = {};
 
@@ -31,7 +32,7 @@ const SlideThird: React.FC<SlideThirdProps> = () => {
             <p className={styles.textBox_title}>A arcu cursus vitae</p>
           </div>
           <MyButton
-            btnIconUrl={'../../assets/images/btnPlus.png'}
+            btnIconUrl={BtnPlusPic}
             text={'Подробнее'}
             onClickFunc={() => setBackDropIsOpen(true)}
           />

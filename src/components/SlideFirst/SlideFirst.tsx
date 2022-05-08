@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import { Context } from '../../context/context';
 import MyButton from '../UI/MyButton/MyButton';
 import { imagesData } from '../../data/imagesFirstSlide';
+import BtnArrowPic from '../../assets/images/btnArrow.png';
 
 const SlideFirst = () => {
   const { setPickedSlideNum } = useContext(Context);
@@ -21,14 +22,14 @@ const SlideFirst = () => {
       <h2>
         Это<span> не</span> коммерческое задание
         <MyButton
-          btnIconUrl={'../../../assets/images/btnArrow.png'}
+          btnIconUrl={BtnArrowPic}
           text={'Что дальше?'}
           onClickFunc={moveToNextSlide}
           cls={styles.nextBtn}
         />
       </h2>
-      {imagesData.map(({ url, alt, cls }) => (
-        <img key={url} src={url} alt={alt} className={cls.join(' ')} />
+      {imagesData.map(({ url, alt, cls }, index) => (
+        <img key={index} src={url} alt={alt} className={cls.join(' ')} />
       ))}
     </div>
   );

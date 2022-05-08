@@ -2,6 +2,7 @@ import styles from './SlideSecond.module.scss';
 
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Context } from '../../context/context';
+import PinkSpermPic from '../../assets/images/slide2/pink_sperm.png';
 
 const SlideSecond = () => {
   const textBoxEl = useRef<HTMLParagraphElement>(null);
@@ -104,7 +105,7 @@ const SlideSecond = () => {
       {imagesData.map(({ cls }) => (
         <img
           key={cls}
-          src="../../assets/images/slide2/pink_sperm.png"
+          src={PinkSpermPic}
           alt="sperm"
           className={styles.slidePic + ' ' + cls + ' ' + (isAnimated ? styles.animated : '')}
         />
