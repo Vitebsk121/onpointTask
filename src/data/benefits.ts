@@ -1,4 +1,4 @@
-import {Ibenefits} from "../interfaces/Ibenefits";
+import {Ibenefits} from "../../interfaces/Ibenefits";
 
 const benefits: Ibenefits[] = [
   {
