@@ -10,12 +10,12 @@ import { Context } from '../context/context';
 import SlideThird from '../components/SlideThird/SlideThird';
 
 const App = () => {
-  const [slidesTranslateX, setSlidesTranslateX] = useState(0);
+  const [pickedSlideNum, setPickedSlideNum] = useState<number>(1);
   return (
     <Context.Provider
       value={{
-        slidesTranslateX,
-        setSlidesTranslateX,
+        pickedSlideNum,
+        setPickedSlideNum,
       }}
     >
       <div className={styles.app}>

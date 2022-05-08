@@ -9,13 +9,7 @@ const SlideSecond = () => {
   const [scrollRange, setScrollRange] = useState(0);
   const [range, setRange] = useState(0);
   const [isAnimated, setIsAnimated] = useState(false);
-  const { slidesTranslateX } = useContext(Context);
-
-  useEffect(() => {
-    if (typeof slidesTranslateX === 'number') {
-      Math.abs(slidesTranslateX) === 1024 ? setIsAnimated(true) : setIsAnimated(false);
-    }
-  });
+  const { pickedSlideNum } = useContext(Context);
 
   const imagesData = [
     { cls: styles.sperm1 },
@@ -26,8 +20,15 @@ const SlideSecond = () => {
   ];
 
   useEffect(() => {
+    const numberOfThisSlide = 2;
+    pickedSlideNum === numberOfThisSlide ? setIsAnimated(true) : setIsAnimated(false);
+  }, [pickedSlideNum]);
+
+  useEffect(() => {
     const viewBoxSmogEffectHeight = 75;
-    setRange(textBoxEl.current!.offsetHeight - (viewBoxEl.current!.offsetHeight - viewBoxSmogEffectHeight));
+    setRange(
+      textBoxEl.current!.offsetHeight - (viewBoxEl.current!.offsetHeight - viewBoxSmogEffectHeight),
+    );
   }, []);
 
   return (
