@@ -1,6 +1,6 @@
 import styles from './Slider.module.scss';
-import React, {useContext, useState} from 'react';
-import {Context} from '../../context/context';
+import React, { useContext, useState } from 'react';
+import { Context } from '../../context/context';
 
 type SliderProps = {
   children: React.ReactNode;

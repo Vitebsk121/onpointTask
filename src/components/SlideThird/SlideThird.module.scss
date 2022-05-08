@@ -6,6 +6,7 @@
 }
 
 .slide_info {
+  margin-bottom: 70px;
   padding: 170px 79px 0 353px;
 
   & > p {
@@ -42,24 +43,46 @@
 
 .slide_textBox1 {
   margin-right: 40px;
-  padding: 60px 70px 75px 125px;
+  padding: 60px 50px 75px 125px;
   border-radius: 40px;
   background-color: rgb(255, 255, 255);
   box-shadow: 2.723px 4.193px 116.25px 8.75px rgba(157, 185, 198, 0.39);
   width: 414px;
   height: 265px;
+  position: relative;
   z-index: 40;
+
+  &:after {
+    content: '';
+    width: 68px;
+    height: 63px;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    background-image: url("../../assets/images/slide3/plateIcon.png");
+  }
 }
 
 .slide_textBox2 {
     margin-bottom: 35px;
-    padding: 60px 85px 50px 42px;
+    padding: 50px 85px 50px 42px;
     border-radius: 40px;
     background-color: rgb(255, 255, 255);
     box-shadow: 2.723px 4.193px 116.25px 8.75px rgba(157, 185, 198, 0.39);
     width: 263px;
     height: 150px;
+    position: relative;
     z-index: 61;
+
+    &:after {
+      content: '';
+      width: 70px;
+      height: 58px;
+      position: absolute;
+      top: 0;
+      transform: translateY(-50%);
+      background-image: url("../../assets/images/slide3/calendarIcon.png");
+    }
 }
 
 .textBox_title {
@@ -68,4 +91,137 @@
   color: rgb(46, 46, 46);
   line-height: 1.2;
 }
+
+.pic {
+  position: absolute;
+
+  &.bottle {
+    top: 80px;
+    left: 50px;
+    z-index: 50; // <52
+  }
+
+  &.bubble1 {
+    opacity: 0.929;
+    left: 197px;
+    top: 65px;
+    width: 38px;
+    height: 39px;
+    z-index: 47;
+    animation: floating 5s linear infinite;
+  }
+
+  &.bubble2 {
+    opacity: 0.929;
+    left: 184px;
+    top: 155px;
+    width: 68px;
+    height: 70px;
+    z-index: 55;
+    animation: floating2 5s linear infinite;
+  }
+
+  &.bubble3 {
+    opacity: 0.878;
+    left: 77px;
+    top: 212px;
+    width: 34px;
+    height: 35px;
+    z-index: 49;
+    animation: floating2 9s linear infinite;
+  }
+
+  &.bubble4 {
+    opacity: 0.929;
+    left: 186px;
+    top: 317px;
+    width: 113px;
+    height: 112px;
+    z-index: 48;
+    animation: floating3 10s linear infinite;
+  }
+
+  &.bubble5 {
+    opacity: 0.929;
+    left: 10px;
+    top: 453px;
+    width: 34px;
+    height: 34px;
+    z-index: 53;
+    animation: floating2 4s linear infinite;
+  }
+
+  &.bubble6 {
+    opacity: 0.929;
+    left: 25px;
+    top: 553px;
+    width: 75px;
+    height: 75px;
+    z-index: 52;
+    animation: floating3 6s linear infinite;
+  }
+
+  &.bubble7 {
+    opacity: 0.929;
+    left: 242px;
+    top: 591px;
+    width: 62px;
+    height: 62px;
+    z-index: 46;
+    animation: floating 4s linear infinite;
+  }
+
+  &.bubble8 {
+    opacity: 0.929;
+    left: 183px;
+    top: 703px;
+    width: 143px;
+    height: 143px;
+    z-index: 54;
+    animation: floating3 15s linear infinite;
+  }
+}
+
+@keyframes floating {
+   0% {}
+   25% {
+     transform: translate(30%, 30%);
+   }
+   50% {
+     transform: translate(0%, 0%);
+   }
+   75% {
+     transform: translate(30%, -30%);
+   }
+   100% {
+     transform: translate(0%, 0%);
+   }
+ }
+
+@keyframes floating2 {
+  0% {}
+  50% {
+    transform: translate(30%, 30%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes floating3 {
+  0% {}
+  20% {
+    transform: translate(30%, 30%);
+  }
+  40% {
+    transform: scale(1.4) translate(-25%, 25%);
+  }
+  60% {
+    transform:  translate(25%, -25%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
 
