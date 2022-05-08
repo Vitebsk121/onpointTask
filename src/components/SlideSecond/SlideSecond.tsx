@@ -4,9 +4,9 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Context } from '../../context/context';
 
 const SlideSecond = () => {
-  const [scrollRange, setScrollRange] = useState(0);
   const textBoxEl = useRef<HTMLParagraphElement>(null);
   const viewBoxEl = useRef<HTMLDivElement>(null);
+  const [scrollRange, setScrollRange] = useState(0);
   const [range, setRange] = useState(0);
   const [isAnimated, setIsAnimated] = useState(false);
   const { slidesTranslateX } = useContext(Context);
@@ -26,8 +26,9 @@ const SlideSecond = () => {
   ];
 
   useEffect(() => {
-    setRange(textBoxEl.current!.offsetHeight - viewBoxEl.current!.offsetHeight);
-  });
+    const viewBoxSmogEffectHeight = 75;
+    setRange(textBoxEl.current!.offsetHeight - (viewBoxEl.current!.offsetHeight - viewBoxSmogEffectHeight));
+  }, []);
 
   return (
     <div className={styles.slide}>
