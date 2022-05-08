@@ -2,17 +2,13 @@ import styles from './SlideFirst.module.scss';
 
 import React, { useContext } from 'react';
 import { Context } from '../../context/context';
-import MyButton from "../UI/MyButton/MyButton";
+import MyButton from '../UI/MyButton/MyButton';
+import { IimagesData } from '../../../interfaces/IimagesData';
 
 const SlideFirst = () => {
   const { setSlidesTranslateX } = useContext(Context);
-  type TImageData = {
-    url: string;
-    alt: string;
-    cls: string[];
-  };
 
-  const imagesData: TImageData[] = [
+  const imagesData: IimagesData[] = [
     {
       url: '../../assets/images/slide1/molecule.png',
       alt: 'molecule',
@@ -64,14 +60,19 @@ const SlideFirst = () => {
     if (setSlidesTranslateX) {
       setSlidesTranslateX(-1024);
     }
-  }
+  };
 
   return (
     <div className={styles.slide}>
       <p>Привет,</p>
       <h2>
         Это<span> не</span> коммерческое задание
-        <MyButton btnIconUrl={'../../../assets/images/btnArrow.png'} text={'Что дальше?'} onClickFunc={moveToNextSlide} cls={styles.nextBtn} />
+        <MyButton
+          btnIconUrl={'../../../assets/images/btnArrow.png'}
+          text={'Что дальше?'}
+          onClickFunc={moveToNextSlide}
+          cls={styles.nextBtn}
+        />
       </h2>
       {imagesData.map(({ url, alt, cls }) => (
         <img key={url} src={url} alt={alt} className={cls.join(' ')} />
