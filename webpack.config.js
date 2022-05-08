@@ -77,6 +77,7 @@ module.exports = {
     new HTMLWebpackPlugin({
       title: 'Onpoint',
       template: './src/index.html',
+      favicon: './src/assets/favicon.ico',
       minify: {
         collapseWhitespace: isProd
       },
