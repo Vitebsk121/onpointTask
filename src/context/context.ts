@@ -1,8 +1,8 @@
-import {createContext} from "react";
+import React, {createContext} from "react";
 
 type TContext = {
-  slidesTranslateX: number
-  setSlidesTranslateX: React.Dispatch<React.SetStateAction<number>>
+  pickedSlideNum: number
+  setPickedSlideNum: React.Dispatch<React.SetStateAction<number>>
 }
 export const Context = createContext<Partial<TContext>>({})
 
