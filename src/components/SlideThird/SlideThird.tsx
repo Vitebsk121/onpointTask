@@ -1,15 +1,15 @@
 import styles from './SlideThird.module.scss';
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import MyButton from '../UI/MyButton/MyButton';
 import { IimagesData } from '../../../interfaces/IimagesData';
-import BenefitList from "../BenefitList/BenefitList";
-import benefits from "../../../Data/benefits";
+import BenefitList from '../BenefitList/BenefitList';
+import benefits from '../../../Data/benefits';
 
 type SlideThirdProps = {};
 
 const SlideThird: React.FC<SlideThirdProps> = () => {
-  const [backDropIsOpen, setBackDropIsOpen] = useState(true)
+  const [backDropIsOpen, setBackDropIsOpen] = useState(true);
   const imagesData: IimagesData[] = [
     {
       url: '../../assets/images/slide3/bottle.png',
@@ -61,7 +61,7 @@ const SlideThird: React.FC<SlideThirdProps> = () => {
   return (
     <div className={styles.slide}>
       <div className={styles.slide_info}>
-        <p>{backDropIsOpen ? 'Преимущества' : "Ключевое сообщение"}</p>
+        <p>{backDropIsOpen ? 'Преимущества' : 'Ключевое сообщение'}</p>
         <h1>
           brend<span>xy</span>
         </h1>
@@ -87,21 +87,18 @@ const SlideThird: React.FC<SlideThirdProps> = () => {
       {imagesData.map(({ url, alt, cls }, index) => (
         <img key={index} src={url} alt={alt} className={cls.join(' ')} />
       ))}
-      {backDropIsOpen
-        ? (
-          <>
-            <div className={styles.backdrop} onClick={() => setBackDropIsOpen(false)} />
-            <div className={styles.textBox3} >
-              <BenefitList benefits={benefits}/>
-              <button className={styles.closeBtn} onClick={() => setBackDropIsOpen(false)}>
-                <div className={styles.closeBtn_line}/>
-                <div className={styles.closeBtn_line}/>
-              </button>
-            </div>
-          </>
-        )
-        : null
-      }
+      {backDropIsOpen ? (
+        <>
+          <div className={styles.backdrop} onClick={() => setBackDropIsOpen(false)} />
+          <div className={styles.textBox3}>
+            <BenefitList benefits={benefits} />
+            <button className={styles.closeBtn} onClick={() => setBackDropIsOpen(false)}>
+              <div className={styles.closeBtn_line} />
+              <div className={styles.closeBtn_line} />
+            </button>
+          </div>
+        </>
+      ) : null}
     </div>
   );
 };
